@@ -14,6 +14,16 @@
 			</servlet-mapping>
 			
 			<servlet>
+				<servlet-name>ViewT</servlet-name>
+				<servlet-class>com.teacher.ViweTeacherServelt2</servlet-class>
+			</servlet>
+			
+			<servlet-mapping>
+				<servlet-name>ViewT</servlet-name>
+				<url-pattern>/tom</url-pattern>
+			</servlet-mapping>
+			
+			<servlet>
 				<servlet-name>insert</servlet-name>
 				<servlet-class>com.teacher.DataUplordTeacherServlet</servlet-class>
 			</servlet>
@@ -62,5 +72,16 @@
 			<servlet-mapping>
 				<servlet-name>AdminLogin</servlet-name>
 				<url-pattern>/AdminLogin</url-pattern>
+			</servlet-mapping>
+			
+			
+			<servlet> 
+				<servlet-name>SearchTeacher</servlet-name>
+				<servlet-class>com.teacher.NameTeacherSearchServet</servlet-class>
+			</servlet>
+			
+			<servlet-mapping>
+				<servlet-name>SearchTeacher</servlet-name>
+				<url-pattern>/SearchT</url-pattern>
 			</servlet-mapping>
 </web-app>

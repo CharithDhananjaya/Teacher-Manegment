@@ -29,7 +29,7 @@ public class NameTeacherSearchServet extends HttpServlet {
 				}
 
 
-				RequestDispatcher dis = request.getRequestDispatcher("SuccessNameSearch.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("successDB.jsp");
 				dis.forward(request, response);
 		}
 

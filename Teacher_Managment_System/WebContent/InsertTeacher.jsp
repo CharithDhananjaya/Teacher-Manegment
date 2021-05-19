@@ -3,6 +3,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script>
+function check()
+{
+
+    var mobile = document.getElementById('cno1');
+    var message = document.getElementById('message');
+
+   var goodColor = "#0C6";
+    var badColor = "#FF9B37";
+  
+    if(mobile.value.length!=10){
+       
+        mobile.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "required 10 digits, match requested format!"
+    } 
+}
+
+function check2()
+{
+
+    var mobile = document.getElementById('cno2');
+    var message = document.getElementById('message2');
+
+   var goodColor = "#0C6";
+    var badColor = "#FF9B37";
+  
+    if(mobile.value.length!=10){
+       
+        mobile.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "required 10 digits, match requested format!"
+    } 
+}
+</script>
+
 <link rel="stylesheet" type="text/css" href="css/InserTeacher.css"/>
 <meta charset="ISO-8859-1">
 <title>New Teacher Registration</title>
@@ -82,10 +119,6 @@
 										  	<td><p><label for="password">Password:</label>
 										        <input  class="fnm" type="password" name="password"></p></td>
 										  </tr>
-											<tr>
-										  	<td><p><label for="confirm password">Confirm Password:</label>
-										    <input  class="fnm" type="password" name="Confirm Password" ></p></td>
-										</tr>
 									</tbody>
 							           
 							           
@@ -137,7 +170,7 @@
 							        </p></td>
 							        <td height="80"><p>
 							          <label for="textfield10">Contact Number 1</label>
-							          <input  class="fnm" type="text" name="cno1"  required="required">
+							        <input class="fnm"  id="cno1" type="number" name="cno1" required="required" required onkeyup="check(); return false;" ><span id="message"></span>
 							        </p></td>
 							      </tr>
 							      <tr>
@@ -148,7 +181,8 @@
 							        </p></td>
 							        <td height="80"><p>
 							          <label for="textfield12">Contact Number 2</label>
-							          <input class="fnm" type="text" name="cno2">
+							          <input class="fnm"  id="cno2" type="number" name="cno2" required="required" required onkeyup="check2(); return false;" ><span id="message2"></span>
+
 							        </p></td>
 							      </tr>
 							    </tbody>

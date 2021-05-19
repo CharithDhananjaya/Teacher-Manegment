@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="teacher" class="form1" method="post">
+<form id="SearchT" class="form1" action ="SearchT" name="form1" method="post">
   <table width="261" align="center">
     <tbody>
       <tr>
@@ -20,9 +20,9 @@
   <table width="200" align="center">
     <tbody>
       <tr>
-        <td><input type="text" name="textfield" id="textfield"></td>
-        <td><input type="text" name="textfield2" id="textfield2"></td>
-        <td><input type="text" name="textfield3" id="textfield3"></td>
+        <td><input type="text" name="fname" id="textfield"></td>
+        <td><input type="text" name="mname" id="textfield2"></td>
+        <td><input type="text" name="lname" id="textfield3"></td>
       </tr>
       <tr>
         <td align="center">First Name</td>
@@ -31,15 +31,17 @@
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td align="center"><p>&nbsp;
-          </p>
+        <td align="center"><p>&nbsp;</p>
           <p>
             <input type="submit" class="bt" name="submit2" value="Search">
-        </p></td>
+          </p></td>
         <td>&nbsp;</td>
       </tr>
     </tbody>
   </table>
+  <p>&nbsp;</p>
+</form>
+<form action="teacher" name="form2" method="post">
   <table width="340" height="89" align="center">
     <tbody>
       <tr>
@@ -53,7 +55,7 @@
     </tbody>
   </table>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
 </form>
+<p>&nbsp;</p>
 </body>
 </html>

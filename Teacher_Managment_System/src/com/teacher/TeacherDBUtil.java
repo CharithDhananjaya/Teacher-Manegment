@@ -273,6 +273,77 @@ public class TeacherDBUtil {
 				
 				return stu;
 			}
+		public static List<Teacher> SearchByName(String fnm, String mnm, String lnm) {
+			// TODO Auto-generated method stub
 			
+			
+			ArrayList<Teacher> cus = new ArrayList<>();
+
+			//Create database connection
+			 String dbURL = "jdbc:mysql://localhost:3306/teachermanegment";
+		     String dbUser = "root";
+		     String dbPass = "1234";
+		     
+		     Connection con = null;
+		     
+		     try {
+		    	 Class.forName("com.mysql.jdbc.Driver");
+		    	 con = DriverManager.getConnection(dbURL, dbUser, dbPass);
+		    	 PreparedStatement ps = con.prepareStatement("select * from teacher where fname='"+fnm+"' and mname='"+mnm+"' and lname='"+lnm+"'");
+		    	 ResultSet rs = ps.executeQuery();
+		    	 
+		    	 if(rs.next()) {
+		    		 String fname = rs.getString(1);
+		    		 String lname = rs.getString(2);
+		    		 String mname = rs.getString(3);
+		    		 String bdate = rs.getString(4);
+		    		 String gen = rs.getString(5);
+		    		 String tIdNo = rs.getString(6);
+		    		 String nostreet = rs.getString(7);
+		    		 String street2 = rs.getString(8);
+		    		 String city = rs.getString(9);
+		    		 String streetPro = rs.getString(10);
+		    		 String pcode = rs.getString(11);
+		    		 String email = rs.getString(12);
+		    		 String con1 = rs.getString(13);
+		    		 String con2 = rs.getString(14);
+		    		 String fileName = "image.png";
+		    		 String password1 = rs.getString(16);
+		    		 String prosican = rs.getString(17);
+		    		 
+		    		 try (FileOutputStream fos = new FileOutputStream(fileName)) {
+
+
+
+		    			 Blob blob = rs.getBlob("Data");
+		    			 int len = (int) blob.length();
+
+
+
+		    			 byte[] buf = blob.getBytes(1, len);
+
+
+
+		    			 fos.write(buf, 0, len);
+
+
+		    			 } catch (Exception ex) {
+
+
+
+		    			 Logger lgr = Logger.getLogger(TeacherDBUtil.class.getName());
+		    			 lgr.log(Level.SEVERE, ex.getMessage(), ex);
+		    			 }
+
+		    		 Teacher h1 = new Teacher(fname,lname,mname,bdate,gen,tIdNo,nostreet,street2,city,streetPro,pcode,email,con1,con2,fileName,password1,prosican);
+		    		 cus.add(h1);
+		    			 }
+		    			 }catch(Exception e) {
+		    			 e.printStackTrace();
+		    			 }
+
+		    			 return cus;
+		    			 
 		}
 
+ }

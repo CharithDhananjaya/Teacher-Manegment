@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="teacher" class="form1" method="post">
+<form action="tom" class="form1" method="post">
   <table width="261" align="center">
     <tbody>
       <tr>

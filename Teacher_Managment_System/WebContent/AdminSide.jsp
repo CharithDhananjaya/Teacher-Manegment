@@ -27,7 +27,7 @@
 
 <div class="displayMain">
 <img src="image/insert.jpg" class="student" width="200px" height="150px"/><a href = "InsertTeacher.jsp" class="i">Admin Insert Data</a>
-<img src="image/update.png" class="class" width="200px" height="150px"/><a href ="viewTeacher.jsp" class="b">Admin View..Update Data..Delet Data</a>
+<img src="image/update.png" class="class" width="200px" height="150px"/><a href ="SearchTeacher.jsp" class="b">Admin View..Update Data..Delet Data</a>
 
 
 
