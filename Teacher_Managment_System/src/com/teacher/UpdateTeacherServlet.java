@@ -32,12 +32,12 @@ public class UpdateTeacherServlet extends HttpServlet {
         String email = request.getParameter("email");
         String con1 = request.getParameter("cno1");
         String con2 = request.getParameter("cno2");
-        
-        
+        String password = request.getParameter("password");
+        String prosican = request.getParameter("prosican");
         
         boolean isTrue;
         
-        isTrue = TeacherDBUtil.updateCustomer(firstName, middleName, lastName, bdate, gen, tId, noStreet, street2, city, streetPro, pcode, email, con1, con2);
+        isTrue = TeacherDBUtil.updateCustomer(firstName, middleName, lastName, bdate, gen, tId, noStreet, street2, city, streetPro, pcode, email, con1, con2, password, prosican);
         
         if(isTrue == true) {
         	List<Teacher> cusD = TeacherDBUtil.getTeacherDetails(tId);

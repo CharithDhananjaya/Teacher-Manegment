@@ -3,10 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/updateSucces.css"/>
 <meta charset="ISO-8859-1">
 <title>Update Done</title>
 </head>
 <body>
-	<h1>Update Done</h1>
+	<form id="form1" class="form1" name="form1" method="post">
+  <table width="358" align="center">
+    <tbody>
+      <tr>
+        <td width="350" align="center">Update Done</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
 </body>
 </html>

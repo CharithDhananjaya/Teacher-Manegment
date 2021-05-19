@@ -17,10 +17,11 @@ public class Teacher {
 		private String con2;
 		private String photo;
 		private String password;
+		private String prosican;
 		
 		public Teacher(String fname, String mname, String lname, String bdate, String gen, String tId, String noStreet,
 				String street2, String city, String streetPro, String pcode, String email, String con1, String con2,
-				String photo, String password) 
+				String photo, String password, String prosican) 
 		{
 			super();
 			this.fname = fname;
@@ -39,8 +40,9 @@ public class Teacher {
 			this.con2 = con2;
 			this.photo = photo;
 			this.password = password;
-			
+			this.prosican = prosican;
 		}
+		
 		public String getFname() {
 			return fname;
 		}
@@ -89,5 +91,7 @@ public class Teacher {
 		public String getPassword() {
 			return password;
 		}
-		
+		public String getProsican() {
+			return prosican;
+		}
 }

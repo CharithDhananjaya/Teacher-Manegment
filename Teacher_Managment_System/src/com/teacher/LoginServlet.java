@@ -1,6 +1,9 @@
 package com.teacher;
 
 import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +16,21 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String tId = request.getParameter("tId");
+		String password = request.getParameter("password");
+		
+		try {
+				List<Teacher> stu = TeacherDBUtil.validate(tId,password);
+				request.setAttribute("stu",stu);
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		RequestDispatcher dis = request.getRequestDispatcher("viewTeacher.jsp");
+		dis.forward(request, response);
 	}
 
 }

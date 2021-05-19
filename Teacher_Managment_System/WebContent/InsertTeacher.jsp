@@ -3,19 +3,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/InsertTeacher.css"/>
+<link rel="stylesheet" type="text/css" href="css/InserTeacher.css"/>
 <meta charset="ISO-8859-1">
 <title>New Teacher Registration</title>
 </head>
 <body>
-    	<div class = "wrapper1"> 
-	        <div class="TeacherRegi"><h1>New Teacher Registration</h1></div>
-	               <form name="fileform" method="post" action="insert" enctype="multipart/form-data">
-	               	<div id = "TimeTableID">
+	        <div class="TeacherRegi">
+	          <table width="410" height="50" align="center">
+	            <tbody>
+	              <tr>
+	                <td width="402" align="center">New Teacher Registration</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+<form name="fileform" class="form1" method="post" action="insert" enctype="multipart/form-data">
 							<fieldset>
-							  <legend>Personal Details</legend> 
-							 	 <h3>Teacher Name</h3>
-							  <table width="533" height="68">
+							  <legend class="tid">Personal Details</legend> 
+						 	  <p>&nbsp;</p>
+						 	   <div class="cd">
+						 	  <table width="200" align="center">
+						 	    <tbody>
+						 	      <tr>
+						 	        <td align="center">Teacher Name</td>
+					 	          </tr>
+					 	        </tbody>
+					 	      </table>
+					 	      </div>
+					 	      <div class="cd">
+						 	  <table width="533" height="68" align="center">
 										<tbody>
 										  <tr>
 											<td width="180"><label for="textfield">First</label>
@@ -26,13 +42,15 @@
 											<input class="fnm"type="text" name="lname"  required="required"></td>
 										  </tr>
 										</tbody>
-							  </table> 
-							  <table width="315" height="232">
+							  </table>
+						      </div> 
+							   <div class="cd">
+							  <table width="359" height="232" align="center">
 							            <tbody>
 							              <tr>
 							                <td width="294"><p>
 							                  <label for="textfield4">Birth Date</label>
-							                  <input  class="fnm" type="date" name="bdate"  required="required">
+							                  <input  class="fnm" type="date" id="bday" name="bdate" required="required">
 							                </p></td>
 							              </tr>
 							              <tr>
@@ -46,24 +64,35 @@
 							                </p></td>
 							              </tr>
 							              <tr>
+										  <td><p><label for="select2">Select Your Position:</label>
+										    <select class="fnm" name="procisan" id="select2">
+										     <option selected = "selected">Select(Position)</option>
+										      <option value="principle">Principle</option>
+										      <option value="vprinciple">vice Principle</option>
+										      <option value="teacher">Teacher</option>
+										    </select></p></td>
+										</tr>
+											<tr>
 							                <td><p>
 							                  <label for="textfield5">Teacher ID Number</label>
 							                  <input  class="fnm" type="text" name="tId"  required="required">
 							                </p></td>
 							              </tr>
 							              <tr>
-										  	<td><label for="password">Password:</label>
-										    <input type="password" name="password"></td>
-											</tr>
+										  	<td><p><label for="password">Password:</label>
+										        <input  class="fnm" type="password" name="password"></p></td>
+										  </tr>
 											<tr>
-										  	<td><label for="confirm password">Confirm Password:</label>
-										    <input type="password" name="Confirm Password" ></td>
+										  	<td><p><label for="confirm password">Confirm Password:</label>
+										    <input  class="fnm" type="password" name="Confirm Password" ></p></td>
 										</tr>
 									</tbody>
 							           
 							           
 							  </table> 
-							  <table width="319" height="80">
+							  </div>
+							  <div class="cd">
+							  <table width="319" height="80" align="center">
 							    <tbody>
 							      <tr>
 							        <td width="283"><label for="fileField">File:</label>
@@ -71,12 +100,25 @@
 							      </tr>
 							    </tbody>
 							  </table>
+							  </div>
 							</fieldset>
+							
+							
 		<br>
-							<fieldset>
-							  <legend>Contact Details</legend>
-							   <h3>Address</h3> 
-							  <table width="378">
+  <fieldset>
+					    <legend class="tid">Contact Details</legend>
+							  <div class="cd">
+							   <table width="200" align="center">
+							     <tbody>
+							       <tr>
+							         <td align="center">Address</td>
+						           </tr>
+						         </tbody>
+						         </div>
+						      </table>
+							   <h3>&nbsp;</h3>
+							   <div class="cd"> 
+							  <table width="378" align="center">
 							    <tbody>
 							      <tr>
 							        <td width="190" height="80"><p>
@@ -111,7 +153,9 @@
 							      </tr>
 							    </tbody>
 							  </table>
-							  <table width="242">
+							   </div>
+							  <div class="cd"> 
+							  <table width="242" align="center">
 							    <tbody>
 							      <tr>
 							        <td width="234" height="80"><p>
@@ -127,14 +171,19 @@
 							      </tr>
 							    </tbody>
 							  </table>
-							</fieldset>
-				 
-	            <input type="submit" value="Submit">
-	            <input type="reset" value="Clear">
-	         	
-	         	
-	            </div>
-	        </form>
-	    </div>
+							  </div>
+  </fieldset>
+  <div class="cs"> 
+  <table width="215" align="center">
+    <tbody>
+      <tr>
+        <td width="103" align="center" class="bt"><input type="submit" formmethod="POST" value="Submit"></td>
+        <td width="100" align="center" class="bt"><input type="reset" value="Clear"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>&nbsp;</p>
+</form>
     </body>
 </html>

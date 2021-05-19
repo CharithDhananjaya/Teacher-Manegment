@@ -59,6 +59,9 @@ public class DataUplordTeacherServlet extends HttpServlet {
         String email = request.getParameter("email");
         String con1 = request.getParameter("cno1");
         String con2 = request.getParameter("cno2");
+        String password = request.getParameter("password");
+        String prosican = request.getParameter("prosican");
+        
         InputStream inputStream = null; // input stream of the upload file
         // obtains the upload file part in this multipart request
         Part filePart = request.getPart("photo");
@@ -71,7 +74,7 @@ public class DataUplordTeacherServlet extends HttpServlet {
             conn = getConnection();
             
             // constructs SQL statement
-            String sql = "INSERT INTO teacher (fname, mname, lname,bdate,gen,tId,noStreet,street2,city,streetPro,pcode,email,con1,con2,photo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO teacher (fname, mname, lname,bdate,gen,tId,noStreet,street2,city,streetPro,pcode,email,con1,con2,photo,password,prosican) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             
             //Using a PreparedStatement to save the file
             PreparedStatement pstmtSave = conn.prepareStatement(sql);
@@ -90,6 +93,8 @@ public class DataUplordTeacherServlet extends HttpServlet {
             pstmtSave.setString(13,con1);
             pstmtSave.setString(14,con2);
             pstmtSave.setBlob(15, inputStream);
+            pstmtSave.setString(16,password);
+            pstmtSave.setString(17,prosican);
             
             //sends the statement to the database server
             int row = pstmtSave.executeUpdate();

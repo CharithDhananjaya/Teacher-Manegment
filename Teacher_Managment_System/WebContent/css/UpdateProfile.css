@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+body{
+background-image: url(../image/upim.jpg);
+background-repeat: none;
+background-size: 1500px 1100px;
+width:auto;
+height:1100px;
+}
+.form1{
+font-family: "Roboto", sans-serif;
+width:1300px;
+padding-top: 20px;
+padding-bottom: 20px;
+margin: auto;
+height: auto;
+border-radius: 10px;
+background-color:#99b3ff;
+opacity:0.9;
+}
+.search{
+	font-family: "Time New Roman", Times,serif;
+	font-size: 30px;
+	color:#e6005c;
+}
+.tid{
+	
+	font-family: "Time New Roman", Times,serif;
+	font-size: 20px;
+	color:#0000f;
+}
+
+.bt{
+	font-family: "Time New Roman", Times,serif;
+	font-size: 20px;
+	color:#001a00;
+	background-color:#ff944d;
+}

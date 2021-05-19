@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/success.css"/>
 <meta charset="ISO-8859-1">
 <title>Success</title>
 </head>
@@ -23,6 +24,7 @@
 		<c:set var="email" value="${cus.email}"/>
 		<c:set var="con1" value="${cus.con1}"/>
 		<c:set var="con2" value="${cus.con2}"/>
+		<c:set var="prosican" value="${cus.prosican}"/>
 		
 		
 		<c:url value="upDateTeacher.jsp" var="stuupdate">
@@ -40,6 +42,7 @@
 		<c:param name="email" value="${email }"/>
 		<c:param name="con1" value="${con1 }"/>
 		<c:param name="con2" value="${con2 }"/>
+		<c:param name="prosican" value="${prosican }"/>
 		</c:url>
 		
 		<c:url value="DeletTeacher.jsp" var="stuupdelete">
@@ -57,19 +60,21 @@
 		<c:param name="email" value="${email }"/>
 		<c:param name="con1" value="${con1 }"/>
 		<c:param name="con2" value="${con2 }"/>
+		<c:param name="prosican" value="${prosican }"/>
 		</c:url>
 				<%
 				String tId = request.getParameter("tId");
 				%>
 <center>
 <div class = "wrapper">
-<h3>View Teacher Profile - Administration side</h3>	
+<h3 class="sh">View Teacher Profile - Administration side</h3>	
   <table width="1156">
     <tbody>
       <tr>
         <td width="581"><fieldset>
-          <legend>Personal Details</legend>
-          <p>Teacher Name</p>
+          <legend class="tid">Personal Details</legend>
+          <p class="cd">Teacher Name</p>
+          <div class="cd">
           <table width="566">
             <tbody>
               <tr>
@@ -103,6 +108,16 @@
                 </p></td>
                 <td>&nbsp;</td>
               </tr>
+                <tr>
+				<td><p><label for="select2">Select Your Position:</label>
+					<select name="procisan" id="select2">
+					<option selected="selected" value="">${cus.prosican}</option>
+					<option value="principle">Principle</option>
+					<option value="vprinciple">vice Principle</option>
+					<option value="teacher">Teacher</option>
+				</select></p></td>
+				<td>&nbsp;</td>	
+			</tr>
               <tr>
                 <td><label for="textfield4">Teacher ID No
                 </label></td>
@@ -114,9 +129,10 @@
               </tr>
             </tbody>
       </table>
+      </div>
         </fieldset></td>
         <td width="563"><fieldset> 
-          <legend>Profile Picture          </legend>
+          <legend class="tid">Profile Picture          </legend>
           <table width="164" height="178" align="center">
             <tbody>
               <tr>
@@ -132,8 +148,9 @@
       </tr>
       <tr>
         <td><fieldset>
-          <legend>Contact Details</legend>
-          <p>Address</p>
+          <legend  class="tid">Contact Details</legend>
+          <p class="cd">Address</p>
+          <div class="cd">
           <table width="381">
             <tbody>
               <tr>
@@ -182,14 +199,15 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </fieldset></td>
         <td><table width="200" align="center">
           <tbody>
             <tr>
-              <td height="53"><a href="${stuupdate}"><input name="button" type="button" id="button" value="Update Profile"></a></td>
+              <td height="53"><a href="${stuupdate}"><input class="bt" name="button" type="button" id="button" value="Update Profile"></a></td>
             </tr>
             <tr>
-              <td height="56"><a href="${stuupdelete}"><input type="button" name="button2" id="button2" value="Delete  Profile"></a></td>
+              <td height="56"><a href="${stuupdelete}"><input class="bt" type="button" name="button2" id="button2" value="Delete  Profile"></a></td>
             </tr>
           </tbody>
         </table></td>

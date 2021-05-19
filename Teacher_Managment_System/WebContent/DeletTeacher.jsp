@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/deletTeacher.css"/>
 <meta charset="ISO-8859-1">
 <title>Delete Teacher</title>
 </head>
@@ -24,25 +25,27 @@
 			String email = request.getParameter("email");
 			String con1 = request.getParameter("con1");
 			String con2 = request.getParameter("con2");	
+			String prosican = request.getParameter("prosican");	
 		%>
 <form method="post" action="delete">
 <center>
 <div class = "wrapper">
-<h3>Delete Teacher Profile - Administration side</h3>	
+<h3 class="sh">Delete Teacher Profile - Administration side</h3>	
   <table width="1156">
     <tbody>
       <tr>
-        <td width="581"><fieldset>
-          <legend>Personal Details</legend>
-          <p>Teacher Name</p>
-          <table width="566">
+        <td width="623"><fieldset>
+          <legend class="tid">Personal Details</legend>
+          <p class="cd">Teacher Name</p>
+          <div class="cd">
+          <table width="621">
             <tbody>
               <tr>
-                <td width="183"><label for="textfield">First</label>
+                <td width="252"><label for="textfield">First</label>
                   <input name="fname" type="text" required="required" id="textfield" value=<%=fname%> readonly></td>
-                <td width="184"><label for="textfield2">Middle</label>
+                <td width="144"><label for="textfield2">Middle</label>
                   <input name="mname" type="text" required="required" id="textfield2" value=<%=mname%> readonly></td>
-                <td width="183"><label for="textfield3">Last</label>
+                <td width="169"><label for="textfield3">Last</label>
                   <input type="text" name="lname" id="textfield3" value=<%=lname%> readonly></td>
 				   
               </tr>
@@ -68,6 +71,18 @@
                 </p></td>
                 <td>&nbsp;</td>
               </tr>
+               <tr>
+				 <td><p><label for="select2">Select Your Position:</label>
+				   <select name="procisan" id="procisan">
+				     <option selected="selected" value=<%=prosican%> readonly><%=prosican%></option>
+				     <option value="principle">Principle</option>
+				     <option value="vprinciple">vice Principle</option>
+				     <option value="teacher">Teacher</option>
+				     </select>
+				 </p></td>
+					</tr>
+					<td>&nbsp;</td>
+			</tr>
               <tr>
                 <td><label for="textfield4">Teacher ID No
                 </label></td>
@@ -79,9 +94,10 @@
               </tr>
             </tbody>
       </table>
+      </div>
         </fieldset></td>
-        <td width="563"><fieldset> 
-          <legend>Profile Picture          </legend>
+        <td width="521"><fieldset> 
+          <legend class="tid">Profile Picture     </legend>
           <table width="164" height="178" align="center">
             <tbody>
               <tr>
@@ -97,8 +113,9 @@
       </tr>
       <tr>
         <td><fieldset>
-          <legend>Contact Details</legend>
-          <p>Address</p>
+          <legend class="tid">Contact Details</legend>
+          <p class="cd">Address</p>
+          <div class="cd">
           <table width="381">
             <tbody>
               <tr>
@@ -147,11 +164,12 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </fieldset></td>
         <td><table width="200" align="center">
           <tbody>
             <tr>
-              <td height="53"><input type="submit" value="Delete Now"></td>
+              <td height="53"><input class="bt" type="submit" value="Delete Now"></td>
             </tr>
           </tbody>
         </table></td>

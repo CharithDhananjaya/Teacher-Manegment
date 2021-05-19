@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/upDateTeacher.css"/>
 <meta charset="ISO-8859-1">
 <title>Update Teacher Profile</title>
 </head>
@@ -23,18 +24,20 @@
 			String pcode = request.getParameter("pcode");
 			String email = request.getParameter("email");
 			String con1 = request.getParameter("con1");
-			String con2 = request.getParameter("con2");	
+			String con2 = request.getParameter("con2");
+			String prosican = request.getParameter("prosican");	
 		%>
 <form method="post" action="uploadTeacherData">
 <center>
 <div class = "wrapper">
-<h3>Update Teacher Profile - Administration side</h3>	
+<h3 class="sh">Update Teacher Profile - Administration side</h3>	
   <table width="1156">
     <tbody>
       <tr>
         <td width="581"><fieldset>
-          <legend>Personal Details</legend>
-          <p>Student Name</p>
+          <legend class="tid">Personal Details</legend>
+          <p class="cd">Student Name</p>
+          <div class="cd">
           <table width="566">
             <tbody>
               <tr>
@@ -69,6 +72,16 @@
                 <td>&nbsp;</td>
               </tr>
               <tr>
+				<td><p><label for="select2">Select Your Position:</label>
+					<select name="procisan" id="select2">
+					<option selected="selected" value=<%=prosican%>><%=prosican%></option>
+					<option value="principle">Principle</option>
+					<option value="vprinciple">vice Principle</option>
+					<option value="teacher">Teacher</option>
+					</select></p></td>
+					<td>&nbsp;</td>
+				</tr>
+              <tr>
                 <td><label for="textfield4">Teacher ID Number
                 </label></td>
                 <td><p>
@@ -79,9 +92,10 @@
               </tr>
             </tbody>
       </table>
+      </div>
         </fieldset></td>
         <td width="563"><fieldset> 
-          <legend>Profile Picture          </legend>
+          <legend class="tid">Profile Picture          </legend>
           <table width="164" height="178" align="center">
             <tbody>
               <tr>
@@ -97,8 +111,9 @@
       </tr>
       <tr>
         <td><fieldset>
-          <legend>Contact Details</legend>
-          <p>Address</p>
+          <legend class="tid">Contact Details</legend>
+          <p class="cd">Address</p>
+          <div class="cd">
           <table width="381">
             <tbody>
               <tr>
@@ -147,14 +162,15 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </fieldset></td>
         <td><table width="200" align="center">
           <tbody>
             <tr>
-              <td height="53"><input type="submit" value="Update my data"></td>
+              <td height="53"><input class="bt" type="submit" value="Update my data"></td>
             </tr>
             <tr>
-              <td height="56"><input type="button" name="button2" id="button2" value="Back"></td>
+              <td height="56"><input class="bt" type="button" name="button2" id="button2" value="Back"></td>
             </tr>
           </tbody>
         </table></td>
